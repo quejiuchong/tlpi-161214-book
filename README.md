@@ -10,12 +10,10 @@ The Linux Programming Interface Source Code (LINUX/UNIX 系统编程手册源码
   - sudo yum update -y
   - sudo yum install gcc gcc-c++ svn git opensssl curl wget
   - sudo yum install libacl-devel libcap-devel
-
-
 * 源码修改 :  
   - 警告消除 : 为出现 `warning: "_XOPEN_SOURCE" redefined` 警告的文件添加重复定义保护
 ```
-#if ! defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
-#define _XOPEN_SOURCE 500
-#endif
+	#if ! defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
+	#define _XOPEN_SOURCE 500
+	#endif
 ```
