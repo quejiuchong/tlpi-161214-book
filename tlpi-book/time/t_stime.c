@@ -11,7 +11,9 @@
 /* Supplementary program for Chapter 10 */
 
 #define _SVID_SOURCE
+#if ! defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
 #define _XOPEN_SOURCE
+#endif
 #include <time.h>
 #include "tlpi_hdr.h"
 

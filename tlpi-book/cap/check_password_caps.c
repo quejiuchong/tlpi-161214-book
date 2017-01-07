@@ -11,7 +11,9 @@
 /* Listing 39-1 */
 
 #define _BSD_SOURCE             /* Get getpass() declaration from <unistd.h> */
+#if ! defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
 #define _XOPEN_SOURCE           /* Get crypt() declaration from <unistd.h> */
+#endif
 #include <sys/capability.h>
 #include <unistd.h>
 #include <limits.h>

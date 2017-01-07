@@ -10,7 +10,9 @@
 
 /* Listing 10-3 */
 
+#if ! defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
 #define _XOPEN_SOURCE
+#endif
 #include <time.h>
 #include <locale.h>
 #include "tlpi_hdr.h"

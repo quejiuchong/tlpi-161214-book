@@ -10,7 +10,9 @@
 
 /* Supplementary program for Chapter 19 */
 
+#if ! defined(_XOPEN_SOURCE) || _XOPEN_SOURCE < 500
 #define _XOPEN_SOURCE 500
+#endif
 #include <stdarg.h>
 #include <limits.h>
 #include <ftw.h>
